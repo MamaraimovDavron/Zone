@@ -53,7 +53,7 @@ const Brand = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-
+  padding-bottom: 20px;
   svg {
     width: 12%;
   }
@@ -65,8 +65,7 @@ const Brand = styled.div`
 
 const List = styled.ul`
   /* border: 1px solid red; */
-  padding: 0;
-  margin: 0;
+  padding: 0px;
   /* height: 20px; */
   list-style-type: none;
   display: flex;

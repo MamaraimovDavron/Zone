@@ -110,6 +110,7 @@ const Navbar = () => {
           background: "transparent",
           width: "60%",
           height: "100px",
+          position: "sticky",
         }}
       >
         <Typography
