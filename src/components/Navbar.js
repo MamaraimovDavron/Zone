@@ -7,6 +7,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Badge as BaseBadge, badgeClasses } from "@mui/base/Badge";
 import SearchIcon from "@mui/icons-material/Search";
 import SettingsIcon from "@mui/icons-material/Settings";
+import TitleBox from "./Title/Title";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -92,8 +93,9 @@ const Navbar = () => {
         background:
           "linear-gradient(to bottom, #2E161F 0%, #152437 100%, #341823 100%);",
         display: "flex",
-        // alignItems: "center",
-        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+        // justifyContent: "center",
       }}
     >
       <Item
@@ -119,8 +121,6 @@ const Navbar = () => {
             display: "flex",
             flexDirection: "row",
             alignContent: "center",
-            // justifyContent: "center",
-            // border: "1px solid red",
             width: "20%",
           }}
           pt={2}
@@ -209,6 +209,7 @@ const Navbar = () => {
             Docs
           </Button>
         </Typography>
+
         <Typography
           sx={{
             width: "20%",
@@ -221,7 +222,7 @@ const Navbar = () => {
           </Button>
           <Button sx={{ color: "white " }}>
             <SettingsIcon
-              sx={{ animation: `${rotateCircle} 4s linear infinite` }}
+              sx={{ animation: `${rotateCircle} 10s linear infinite` }}
             />
           </Button>
 
@@ -238,6 +239,7 @@ const Navbar = () => {
           </Button>
         </Typography>
       </Item>
+      <TitleBox></TitleBox>
     </Grid>
   );
 };
