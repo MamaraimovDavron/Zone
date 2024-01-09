@@ -3,6 +3,10 @@ import React from "react";
 import styled from "styled-components";
 import Job from "./Job";
 import Location from "./Location";
+// import InterpreterModeIcon from "@mui/icons-material/InterpreterMode";
+import blue from "./img/icons8-interpreter-68.png";
+import yellow from "./img/Lovepik_com-832286987-Oceania New Zealand Sign Building Sky Tower Vector Elements.png";
+import green from "./img/bullhorn.png";
 import SearchIcon from "@mui/icons-material/Search";
 
 const TitleBox = styled.div`
@@ -116,23 +120,188 @@ const SVG = styled.div`
   }
 `;
 
+const LineBox = styled.div`
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* border: 2px solid white; */
+
+  &:hover .accounting {
+    top: 120px;
+    left: 10px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  &:hover .software {
+    top: 277px;
+    left: 45px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  &:hover .banking {
+    top: 300px;
+    left: 355px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  &:hover .healthCare {
+    top: 107px;
+    left: 345px;
+    transition: 0.3s all ease-in-out;
+  }
+
+  .accounting {
+    z-index: 0;
+    padding: 8px 15px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px #999ea4 inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    transform: rotate(350deg);
+    top: 127px;
+    left: 15px;
+  }
+
+  .software {
+    padding: 8px 15px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px #999ea4 inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    transform: rotate(360deg);
+    top: 287px;
+    left: 35px;
+  }
+
+  .banking {
+    padding: 8px 15px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px #999ea4 inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    transform: rotate(380deg);
+    top: 297px;
+    left: 345px;
+  }
+
+  .healthCare {
+    padding: 8px 15px;
+    border-radius: 18px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px #999ea4 inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    transform: rotate(370deg);
+    top: 97px;
+    left: 345px;
+  }
+
+  .blue {
+    /* border: 1px solid #0d2a38; */
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, #0d2a38 0%, #009ab5 100%);
+    position: absolute;
+    left: -10px;
+    opacity: 0.7;
+
+    img {
+      width: 80%;
+      height: 80%;
+      border-radius: 20px;
+      background-color: #00b2d2;
+      opacity: 1;
+    }
+  }
+
+  .green {
+    /* border: 1px solid #0d2a38; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, #1d3c3b 0%, #33a877 100%);
+    opacity: 0.7;
+    position: absolute;
+    bottom: -10px;
+    img {
+      width: 80%;
+      height: 80%;
+      border-radius: 20px;
+      background-color: #33a877;
+      opacity: 1;
+    }
+  }
+
+  .yellow {
+    /* border: 1px solid #0d2a38; */
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, #3e3324 0%, #fdaa00 100%);
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -15px;
+    img {
+      width: 80%;
+      height: 80%;
+      border-radius: 20px;
+      background-color: #fdaa00;
+      opacity: 1;
+    }
+  }
+`;
+
 const Line = styled.div`
   border: 2px dotted gray;
   width: 450px;
   height: 450px;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   animation: animate 100s linear infinite;
 
   &::before {
     content: " ";
+    z-index: 1;
     height: 20px;
     width: 20px;
     display: flex;
     border-radius: 50%;
-    background-color: red;
+    background-image: linear-gradient(120deg, #a6c0fe 10%, #f68084 40%);
     /* box-shadow: 0px 0px 20px gray; */
-    transform: translate(160px);
+    transform: translate(150px);
   }
 
   &::after {
@@ -141,7 +310,17 @@ const Line = styled.div`
     width: 10px;
     display: flex;
     border-radius: 50%;
-    background-color: blue;
+    z-index: 1;
+
+    background-image: linear-gradient(
+      to right,
+      #ff8177 10%,
+      #ff867a 20%,
+      #ff8c7f 41%,
+      #f99185 62%,
+      #cf556c 88%,
+      #b12a5b 100%
+    );
     /* box-shadow: 0px 0px 20px gray; */
     transform: translate(110px);
   }
@@ -153,17 +332,100 @@ const Line = styled.div`
   }
 
   .circle {
-    width: 45px;
-    height: 45px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     display: flex;
-    background-color: yellow;
-    transform: translate(70px);
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    /* transform: translate(140px); */
     animation: animate 100s linear infinite;
-    top: 0;
-    bottom: 0;
-    left: 0;
+    position: absolute;
+    top: 65px;
+    left: 40px;
     right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      z-index: 1;
+
+      filter: blur(0px);
+      background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    }
+  }
+`;
+
+const Line1 = styled.div`
+  /* border: 2px dotted red; */
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  position: absolute;
+  animation: animate1 100s linear infinite;
+
+  &::before {
+    content: " ";
+    z-index: 2;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    border-radius: 50%;
+    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    /* box-shadow: 0px 0px 20px gray; */
+    transform: translate(150px);
+  }
+
+  &::after {
+    content: " ";
+    height: 10px;
+    width: 10px;
+    display: flex;
+    border-radius: 50%;
+    margin: 300px;
+    z-index: 2;
+    background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+    /* box-shadow: 0px 0px 20px gray; */
+    transform: translate(120px);
+  }
+
+  @keyframes animate1 {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    /* transform: translate(140px); */
+    animation: animate1 100s linear infinite;
+    position: absolute;
+    top: 65px;
+    left: 40px;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      z-index: 2;
+      filter: blur(0px);
+      background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    }
   }
 `;
 
@@ -434,6 +696,7 @@ export default function Title() {
             </g>
           </svg>
         </Brand>
+
         <List>
           {Li1.map((item, index) => {
             const li2 = Li2[index];
@@ -447,6 +710,7 @@ export default function Title() {
           })}
         </List>
       </Left>
+      {/* Right */}
       <Right>
         <SVG>
           <svg
@@ -541,9 +805,74 @@ export default function Title() {
               clip-rule="evenodd"
             ></path>
           </svg>
-          <Line>
-            <div className="circle"></div>
-          </Line>
+          <LineBox>
+            <Line>
+              <div className="circle"></div>
+            </Line>
+            <Line1></Line1>
+            <div className="accounting">
+              <img
+                src="https://zone-ui.vercel.app/assets/icons/ic_accounting.svg"
+                alt=""
+              />
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "15px", fontWeight: "600" }}
+              >
+                Accounting
+              </Typography>
+            </div>
+
+            <div className="software">
+              <img
+                src="https://zone-ui.vercel.app/assets/icons/ic_software_development.svg"
+                alt=""
+              />
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "15px", fontWeight: "600" }}
+              >
+                Software
+              </Typography>
+            </div>
+
+            <div className="banking">
+              <img
+                src="https://zone-ui.vercel.app/assets/icons/ic_banking_currency.svg"
+                alt=""
+              />
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "15px", fontWeight: "600" }}
+              >
+                Banking
+              </Typography>
+            </div>
+
+            <div className="healthCare">
+              <img
+                src="https://zone-ui.vercel.app/assets/icons/ic_health_care.svg"
+                alt=""
+              />
+
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "15px", fontWeight: "600" }}
+              >
+                Healthcare
+              </Typography>
+            </div>
+
+            <div className="blue">
+              <img src={blue} alt="" />
+            </div>
+            <div className="green">
+              <img src={green} alt="" />
+            </div>
+            <div className="yellow">
+              <img src={yellow} alt="" />
+            </div>
+          </LineBox>
         </SVG>
       </Right>
     </TitleBox>
