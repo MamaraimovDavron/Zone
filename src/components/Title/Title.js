@@ -153,6 +153,21 @@ const LineBox = styled.div`
     transition: 0.3s all ease-in-out;
   }
 
+  &:hover .blue {
+    transition: 0.3s all ease-in-out;
+    left: 10px;
+  }
+
+  &:hover .yellow {
+    transition: 0.3s all ease-in-out;
+    top: 15px;
+  }
+
+  &:hover .green {
+    transition: 0.3s all ease-in-out;
+    bottom: 10px;
+  }
+
   .accounting {
     z-index: 0;
     padding: 8px 15px;
