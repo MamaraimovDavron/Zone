@@ -18,7 +18,7 @@ export default function App() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline>
-        <Grid container spacing={1}>
+        <Grid container>
           <Navbar />
           <Grid item xs={12}>
             <Item>

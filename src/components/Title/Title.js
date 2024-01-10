@@ -248,8 +248,8 @@ const LineBox = styled.div`
     opacity: 0.7;
 
     img {
-      width: 80%;
-      height: 80%;
+      width: 75%;
+      height: 75%;
       border-radius: 20px;
       background-color: #00b2d2;
       opacity: 1;
@@ -269,8 +269,8 @@ const LineBox = styled.div`
     position: absolute;
     bottom: -10px;
     img {
-      width: 80%;
-      height: 80%;
+      width: 75%;
+      height: 75%;
       border-radius: 20px;
       background-color: #33a877;
       opacity: 1;
@@ -290,8 +290,8 @@ const LineBox = styled.div`
     position: absolute;
     top: -15px;
     img {
-      width: 80%;
-      height: 80%;
+      width: 75%;
+      height: 75%;
       border-radius: 20px;
       background-color: #fdaa00;
       opacity: 1;
