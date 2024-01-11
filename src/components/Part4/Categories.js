@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import Category from "./Category";
@@ -10,6 +10,7 @@ import ReceiptIcon from "@mui/icons-material/Receipt";
 import InterpreterModeIcon from "@mui/icons-material/InterpreterMode";
 import MedicationLiquidIcon from "@mui/icons-material/MedicationLiquid";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 const CategoryBox = styled.div`
   display: flex;
@@ -86,7 +87,7 @@ const Categories = () => {
         spacing={2}
         xs={8}
         sx={{
-          border: "1px solid red",
+          //   border: "1px solid red",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -99,6 +100,7 @@ const Categories = () => {
               fontFamily: "sans-serif",
               fontWeight: "600",
               fontSize: "45px",
+              paddingBottom: "60px",
             }}
           >
             Hot Categories
@@ -118,6 +120,7 @@ const Categories = () => {
             })}
           </CategoryBox>
         </Grid>
+
         <Grid item sx={{ width: "100%" }}>
           <CategoryBox>
             {data2.map((item) => {
@@ -130,6 +133,38 @@ const Categories = () => {
               );
             })}
           </CategoryBox>
+        </Grid>
+
+        <Grid
+          item
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "100%",
+          }}
+        >
+          <Button
+            sx={{
+              margin: "50px",
+              border: "1px solid gray",
+              padding: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "black",
+              borderRadius: "8px",
+              textTransform: "capitalize",
+              fontWeight: 600,
+              fontSize: "15px",
+              "&:hover": {
+                border: "1px solid black",
+                background: "#EDEFF9",
+              },
+            }}
+          >
+            View All Categories <KeyboardArrowRightIcon />
+          </Button>
         </Grid>
       </Grid>
     </Box>
