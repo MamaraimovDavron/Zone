@@ -4,6 +4,7 @@ import React from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 import Navbar from "./components/Navbar";
 import Candidates from "./components/Part2/Candidates";
+import Companies from "./components/Part3/Companies";
 // import Badge from "@mui/material/Badge";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,8 +26,10 @@ export default function App() {
               <Candidates />
             </Item>
           </Grid>
-          <Grid item xs={4}>
-            <Item>xs=4</Item>
+          <Grid item xs={12}>
+            <Item>
+              <Companies />
+            </Item>
           </Grid>
           <Grid item xs={8}>
             <Item>xs=8</Item>
