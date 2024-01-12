@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Candidates from "./components/Part2/Candidates";
 import Companies from "./components/Part3/Companies";
 import Categories from "./components/Part4/Categories";
+import Post from "./components/Part5/Post";
 // import Badge from "@mui/material/Badge";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -35,6 +36,11 @@ export default function App() {
           <Grid item xs={12}>
             <Item>
               <Categories />
+            </Item>
+          </Grid>
+          <Grid item xs={12}>
+            <Item>
+              <Post />
             </Item>
           </Grid>
         </Grid>
