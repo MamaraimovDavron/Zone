@@ -30,7 +30,7 @@ const Div = styled.div`
 
   &:hover .icon {
     color: white;
-    background-color: orange;
+    background-color: #f07427;
     transition: 0.3s all linear;
   }
 `;
