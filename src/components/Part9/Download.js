@@ -15,7 +15,7 @@ const Input = styled.div`
   flex-direction: row;
   /* border: 1px solid; */
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   input {
     width: 480px;
     border-radius: 10px 0px 0 10px;
@@ -184,6 +184,7 @@ const Download = () => {
             />
           </Grid>
         </Grid>
+
         <Grid
           xs={12}
           sx={{

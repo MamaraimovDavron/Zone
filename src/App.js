@@ -11,6 +11,7 @@ import Customer from "./components/Part6/Customer";
 import OurClients from "./components/Part7/OurClients";
 import Blog from "./components/Part8/Blog";
 import Download from "./components/Part9/Download";
+import Zone from "./components/Part10/Zone";
 // import Badge from "@mui/material/Badge";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -67,6 +68,12 @@ export default function App() {
           <Grid item xs={12}>
             <Item>
               <Download />
+            </Item>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Item>
+              <Zone />
             </Item>
           </Grid>
         </Grid>
