@@ -182,6 +182,7 @@ const Zone = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          paddingTop: "30px",
         }}
       >
         <Grid
