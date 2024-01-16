@@ -29,6 +29,7 @@ const imgUrl = [
   { img: "https://zone-ui.vercel.app/assets/logo/tripadvisor_original.svg" },
   { img: "https://zone-ui.vercel.app/assets/logo/vimeo_original.svg" },
 ];
+
 const OurClients = () => {
   return (
     <Box sx={{ width: "100%" }}>

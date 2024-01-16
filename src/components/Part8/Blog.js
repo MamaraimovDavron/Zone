@@ -30,44 +30,97 @@ const Info = styled.div`
   }
 `;
 
-// const ImgBox = styled.div`
-//   display: flex;
-//   border-radius: 15px;
-//   border: 1px solid;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   /* width: 100%;
-//   height: 40%; */
+const ImgBox1 = styled.div`
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: flex; */
+  border-radius: 15px;
+  gap: 10px;
+  img {
+    width: 100%;
+    height: 90%;
+    border-radius: 15px;
+  }
+`;
 
-//   .img1 {
-//     border: 1px solid red;
-//     border-radius: 10px;
-//     width: 100%;
-//     height: 50%;
-//   }
+const ImgBox2 = styled.div`
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+  border-radius: 15px;
+  gap: 10px;
+  img {
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+  }
+`;
 
-//   .img2 {
-//     border: 1px solid red;
-//     border-radius: 10px;
-//     width: 80%;
-//     height: 50%;
-//   }
+const ImgBox4 = styled.div`
+  /* border: 1px solid red; */
+  width: 100%;
+  /* height: 50%; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  border-radius: 15px;
+  gap: 10px;
 
-//   .img3 {
-//     border: 1px solid red;
-//     border-radius: 10px;
-//     width: 80%;
-//     height: 40%;
-//   }
+  img {
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+  }
+`;
 
-//   .img4 {
-//     border: 1px solid red;
-//     border-radius: 10px;
-//     width: 100%;
-//     height: 80%;
-//   }
-// `;
+const ImgBox3 = styled.div`
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* align-items: center; */
+  /* justify-content: center; */
+  border-radius: 15px;
+  img {
+    width: 100%;
+    height: 60%;
+    border-radius: 15px;
+  }
+`;
+
+const imgList1 = [
+  {
+    imgUrl: "https://zone-ui.vercel.app/assets/images/career/career_2.jpg",
+    date: "15 Jan 2024 * 8 minutes read",
+    title: "The Ultimate Guide to Productivity Hacks",
+  },
+  {
+    imgUrl: "https://zone-ui.vercel.app/assets/images/career/career_5.jpg",
+    date: "12 Jan 2024 * 8 minutes read",
+    title: "The Future of Artificial Intelligence: Trends and ...",
+  },
+  {
+    imgUrl: "https://zone-ui.vercel.app/assets/images/career/career_3.jpg",
+    date: "14 Jan 2024 * 8 minutes read",
+    title: "Exploring the Hidden Gems of [Destination]",
+  },
+  {
+    imgUrl: "https://zone-ui.vercel.app/assets/images/career/career_4.jpg",
+    date: "13 Jan 2024 * 8 minutes read",
+    title: "How to Master the Art of Public Speaking",
+  },
+];
 
 const Blog = () => {
   return (
@@ -164,7 +217,7 @@ const Blog = () => {
               sx={{
                 width: "100%",
                 display: "flex",
-                boxShadow: "0px 0px 10px 2px gray",
+                // gap: "30px",
                 height: "80vh",
                 marginTop: "50px",
               }}
@@ -177,11 +230,9 @@ const Blog = () => {
                   borderRadius: "20px",
                   position: "relative",
                   ".img": {
-                    width: "85%",
+                    width: "90%",
                     objectFit: "cover",
                     borderRadius: "20px",
-                    filter: "blur(2px)",
-                    opacity: "0.8",
                   },
                 }}
               >
@@ -216,28 +267,184 @@ const Blog = () => {
                 </Info>
               </Grid>
 
-              {/* <Grid
+              <Grid
                 xs={6}
                 sx={{
-                  display: "flex",
-                  width: "100%",
-                  alignItems: "center",
-                  justifyContent: "flex-start",
-                  gap: "10px",
+                  // width: "100%",
+                  display: "flex ",
+                  flexDirection: "row",
+                  gap: "30px",
                 }}
               >
-                <ImgBox>
-                  <img
-                    src="https://zone-ui.vercel.app/assets/images/career/career_2.jpg"
-                    alt=""
-                    className="img1"
-                  />
-                  <Typography>14 Jan 2024 8 minutes read</Typography>
-                  <Typography>
-                    The Ultimate Guide to Productivity Hacks
-                  </Typography>
-                </ImgBox>
-              </Grid> */}
+                <Grid
+                  xs={6}
+                  sx={{
+                    width: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    // justifyContent: "flex-start",
+                    gap: "20px",
+                    // border: "1px solid red",
+                    padding: "0px 10px",
+                  }}
+                >
+                  <ImgBox1>
+                    {" "}
+                    <img
+                      src="https://zone-ui.vercel.app/assets/images/career/career_2.jpg"
+                      alt=""
+                    />
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        // border: "1px solid red",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontWeight: "600",
+                        color: "gray",
+                      }}
+                    >
+                      15 Jan 2024 * 8 minutes read
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "16px",
+                        fontWeight: "600",
+                        // border: "1px solid",
+                      }}
+                    >
+                      The Ultimate Guide to Productivity Hacks
+                    </Typography>
+                  </ImgBox1>
+
+                  <ImgBox2>
+                    {" "}
+                    <img src={imgList1[1].imgUrl} alt="" />
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        // border: "1px solid red",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontWeight: "600",
+                        color: "gray",
+                      }}
+                    >
+                      {imgList1[1].date}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "16px",
+                        fontWeight: "600",
+                        // border: "1px solid",
+                      }}
+                    >
+                      {imgList1[1].title}
+                    </Typography>
+                  </ImgBox2>
+                </Grid>
+                <Grid
+                  xs={6}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    // justifyContent: "center",
+                    gap: "20px",
+                    padding: "0px 10px",
+                  }}
+                >
+                  <ImgBox3>
+                    <img src={imgList1[2].imgUrl} alt="" />
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        // border: "1px solid red",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontWeight: "600",
+                        color: "gray",
+                      }}
+                    >
+                      {imgList1[2].date}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "16px",
+                        fontWeight: "600",
+                        // border: "1px solid",
+                      }}
+                    >
+                      {imgList1[2].title}
+                    </Typography>
+                  </ImgBox3>
+                  <ImgBox4>
+                    <img src={imgList1[3].imgUrl} alt="" />
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        // border: "1px solid red",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "13px",
+                        fontWeight: "600",
+                        color: "gray",
+                      }}
+                    >
+                      {imgList1[3].date}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignContent: "center",
+                        width: "80%",
+                        fontFamily: "Poppins",
+                        fontSize: "16px",
+                        fontWeight: "600",
+                        // border: "1px solid",
+                      }}
+                    >
+                      {imgList1[3].title}
+                    </Typography>
+                  </ImgBox4>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
