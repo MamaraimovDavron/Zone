@@ -10,6 +10,7 @@ import Post from "./components/Part5/Post";
 import Customer from "./components/Part6/Customer";
 import OurClients from "./components/Part7/OurClients";
 import Blog from "./components/Part8/Blog";
+import Download from "./components/Part9/Download";
 // import Badge from "@mui/material/Badge";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -60,6 +61,12 @@ export default function App() {
           <Grid item xs={12}>
             <Item>
               <Blog />
+            </Item>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Item>
+              <Download />
             </Item>
           </Grid>
         </Grid>
